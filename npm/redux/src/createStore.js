@@ -7,6 +7,8 @@ import isPlainObject from './utils/isPlainObject'
  * Creates a Redux store that holds the state tree.
  * The only way to change the data in the store is to call `dispatch()` on it.
  *
+ * 创建了一个可以存放状态树的仓库，改变仓库里的状态的唯一方式是调用dispatch。
+ *
  * There should only be a single store in your app. To specify how different
  * parts of the state tree respond to actions, you may combine several reducers
  * into a single reducer function by using `combineReducers`.
@@ -63,11 +65,11 @@ export default function createStore(reducer, preloadedState, enhancer) {
     throw new Error('Expected the reducer to be a function.')
   }
 
-  let currentReducer = reducer
-  let currentState = preloadedState
-  let currentListeners = []
-  let nextListeners = currentListeners
-  let isDispatching = false
+  let currentReducer = reducer//从函数createStore第二个参数preloadedState获得
+  let currentState = preloadedState//从函数createStore第一个参数reducer获得
+  let currentListeners = []//当前订阅者列表
+  let nextListeners = currentListeners//新的订阅者列表
+  let isDispatching = false//状态锁，redux是一个统一管理状态容器，它要保证数据的一致性，所以同一个时间里，只能做一次数据修改，如果两个action同时触发reducer对同一数据的修改，那么将会带来巨大的灾难。所以变量isDispatching就是为了防止这一点而存在的。
 
   function ensureCanMutateNextListeners() {
     if (nextListeners === currentListeners) {
