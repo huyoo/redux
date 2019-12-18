@@ -1,0 +1,17 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.ext-modal .div_wrapper_line:hover {
+  cursor: e-resize;
+}
+.ext-modal .div_wrapper_line::after {
+  position: absolute;
+  top: 0;
+  right: -15px;
+  bottom: 0;
+  left: -15px;
+  display: inline-block;
+  height: 100%;
+  content: '';
+}

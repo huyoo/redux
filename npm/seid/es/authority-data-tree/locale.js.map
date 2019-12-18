@@ -1,0 +1,1 @@
+{"version":3,"sources":["authority-data-tree/locale.jsx"],"names":["placeholder","serverError"],"mappings":"AAAA,eAAe;AACXA,EAAAA,WAAW,EAAE,KADF;AAEXC,EAAAA,WAAW,EAAE;AAFF,CAAf","sourcesContent":["export default {\n    placeholder: '请选择',\n    serverError: '服务器处理异常。',\n};\n"],"file":"locale.js"}

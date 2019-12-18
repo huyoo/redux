@@ -1,0 +1,88 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.seid-combo-grid {
+  position: relative;
+  overflow: hidden;
+}
+.seid-combo-grid .action-bar {
+  padding: 8px;
+  border-bottom: 4px solid #f8f8f8;
+}
+.seid-combo-grid table {
+  background: #fff;
+}
+.seid-combo-grid table tr:nth-child(odd) {
+  background: rgba(0, 0, 0, 0.01);
+}
+.seid-combo-grid table tr:nth-child(even) {
+  background: #fff;
+}
+.seid-combo-grid .ant-table-tbody > tr.ant-table-row-selected td {
+  background: #fffde7;
+}
+.seid-combo-grid .ant-table-tbody > tr.disabled > td {
+  color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.45);
+  cursor: not-allowed;
+}
+.seid-combo-grid .ant-table-thead > tr > th {
+  overflow: hidden;
+  color: rgba(0, 0, 0, 0.65);
+  font-weight: 700;
+  text-align: left;
+  text-overflow: ellipsis;
+  background-color: #fff;
+}
+.seid-combo-grid .ant-table-tbody > tr > td {
+  color: rgba(0, 0, 0, 0.65);
+}
+.seid-combo-grid .ant-table-tbody > tr > td.text-money {
+  padding-right: 12px !important;
+  text-align: right !important;
+}
+.seid-combo-grid .ant-table-tbody > tr > td.text-money .ant-statistic-content {
+  font-size: 14px;
+}
+.seid-combo-grid .ant-table-tbody > tr > td.text-money .ant-statistic-content .ant-statistic-content-value-decimal {
+  font-size: 14px;
+}
+.seid-combo-grid .ant-table-content .ant-table-placeholder {
+  position: absolute;
+  top: 20%;
+  z-index: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  border-bottom-color: transparent;
+}
+.seid-combo-grid .ant-table-pagination.ant-pagination {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: none;
+  width: 100%;
+  height: 42px;
+  margin: 0;
+  background-color: #fff;
+  -webkit-box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+.row-selected {
+  background-color: #e6f7ff !important;
+}

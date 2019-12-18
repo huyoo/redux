@@ -1,0 +1,26 @@
+export default {
+  unread: '未读',
+  read: '已读',
+  deleted: '删除',
+  none: '无',
+  systemMessage: '系统消息',
+  groupMessage: '群组消息',
+  personalMessage: '个人消息',
+  index: '序号',
+  date: '日期',
+  category: '类型',
+  title: '标题',
+  publisher: '发布人',
+  status: '状态',
+  processWarning: '请勾选要操作的项！',
+  successful: '设置成功',
+  all: '全部',
+  "delete": '删除',
+  setToUnread: '设为未读',
+  setToRead: '设为已读',
+  messageCategory: '消息类型',
+  typeKeyWords: '请输入关键字',
+  messageStatus: '消息状态',
+  sendDate: '发送日期'
+};
+//# sourceMappingURL=locale.js.map

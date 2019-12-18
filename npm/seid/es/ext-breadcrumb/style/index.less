@@ -1,0 +1,59 @@
+@import '../../style/themes/index';
+
+/**
+ * @Author: CHEHSHUANG
+ * @Date: 2019/2/21
+ */
+/* 面包屑页面头 */
+.page-breadcrumb {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: #f0f2f5;
+
+  &.no-breadcrumb {
+    .page-box {
+      margin: 0;
+    }
+  }
+
+  .breadcrumb-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    padding: 14px 12px;
+    background: #fff;
+  }
+
+  .page-box {
+    flex: 1;
+    box-sizing: border-box;
+    margin: 8px;
+    padding: 12px 8px;
+    overflow: auto;
+    background: #fff;
+  }
+
+  .page-box-head {
+    height: calc(100% - 16px - 50px);
+  }
+
+  .page-box-no-head {
+    height: 100%;
+  }
+
+  .bread-right-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .bread-extra {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background: #fff;
+  }
+}

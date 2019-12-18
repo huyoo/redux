@@ -1,0 +1,98 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.seid-scroll-select {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+.seid-scroll-select .ant-select {
+  width: 100%;
+}
+.seid-scroll-select .seid-list-content {
+  width: 100%;
+  height: 300px;
+}
+.seid-scroll-select .seid-list-content .seid-list-item {
+  padding: 8px;
+}
+.seid-scroll-select .seid-list-content .seid-list-item:hover {
+  background: #e6f7ff;
+}
+.seid-scroll-select .seid-list-content .selected {
+  background: #fafafa;
+}
+.seid-scroll-select .seid-data-container {
+  padding: 8px 24px;
+}
+.seid-scroll-select .seid-data-container .input {
+  float: right;
+  width: 30%;
+  min-width: 50px;
+  padding: 0 6px 6px;
+}
+.seid-scroll-select .seid-data-container .ant-spin-nested-loading {
+  position: unset;
+}
+.seid-scroll-select .seid-data-container .ant-spin-container {
+  position: unset;
+}
+.seid-scroll-select .seid-data-container .ant-spin-blur {
+  overflow: unset;
+}
+.seid-scroll-select .ant-select-selection__choice__remove {
+  display: none;
+}
+.seid-scroll-select .ant-popover-inner-content {
+  padding: 0;
+}
+.seid-scroll-select .ant-table-row {
+  cursor: pointer;
+}
+.seid-scroll-select .ant-popover-arrow {
+  display: none;
+}
+.seid-scroll-select .ant-popover-placement-bottom,
+.seid-scroll-select .ant-popover-placement-top {
+  width: 100%;
+  min-width: 1000px;
+  padding-top: 0;
+}
+.seid-input-component .clear {
+  position: absolute;
+  top: 50%;
+  right: 11px;
+  z-index: 1;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-top: -6px;
+  color: rgba(0, 0, 0, 0.25);
+  font-size: 12px;
+  font-style: normal;
+  line-height: 12px;
+  text-align: center;
+  text-transform: none;
+  vertical-align: baseline;
+  background: #fff;
+  cursor: pointer;
+  opacity: 0;
+  -webkit-transition: color 0.3s ease, opacity 0.15s ease;
+  transition: color 0.3s ease, opacity 0.15s ease;
+  text-rendering: auto;
+}
+.seid-input-component:hover .clear {
+  opacity: 1;
+}
+.seid-input-component:hover .clear:hover {
+  color: rgba(0, 0, 0, 0.45);
+}
+.seid-col-content {
+  min-width: 80px;
+  max-width: 500px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+}

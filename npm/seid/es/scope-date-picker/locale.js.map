@@ -1,0 +1,1 @@
+{"version":3,"sources":["scope-date-picker/locale.jsx"],"names":["startDate","endDate"],"mappings":"AAAA,eAAe;AACXA,EAAAA,SAAS,EAAE,MADA;AAEXC,EAAAA,OAAO,EAAE;AAFE,CAAf","sourcesContent":["export default {\n    startDate: '开始时间',\n    endDate: '结束时间',\n};\n"],"file":"locale.js"}

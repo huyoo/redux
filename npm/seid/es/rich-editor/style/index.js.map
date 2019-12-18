@@ -1,0 +1,1 @@
+{"version":3,"sources":["rich-editor/style/index.jsx"],"names":[],"mappings":"AAAA,OAAO,wBAAP;AACA,OAAO,cAAP;AACA,OAAO,kCAAP","sourcesContent":["import '../../style/index.less';\nimport './index.less';\nimport '../../seid-locale-receiver/style';\n"],"file":"index.js"}

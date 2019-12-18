@@ -1,0 +1,140 @@
+@import '../../style/themes/index.less';
+
+.seid-upload-card {
+  float: left;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 120px;
+  margin-top: 8px;
+  margin-right: 5px;
+  padding: 0;
+  color: rgba(0, 0, 0, 0.65);
+  font-size: 14px;
+  font-variant: tabular-nums;
+  line-height: 1.5;
+  list-style: none;
+  zoom: 1;
+  .fadeIn {
+    opacity: 1;
+    transition: all 5s cubic-bezier(0.08, 0.82, 0.17, 1);
+  }
+  .fadeOut {
+    opacity: 0;
+    transition: all 5s cubic-bezier(0.08, 0.82, 0.17, 1);
+  }
+  .seid-upload-item {
+    position: relative;
+    float: left;
+    width: 104px;
+    height: 104px;
+    margin: 0 8px 8px 0;
+    padding: 8px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+  }
+  .seid-item-info {
+    position: relative;
+    height: 100%;
+    padding: 0;
+    overflow: hidden;
+    background-color: #e6f7ff;
+    transition: background-color 0.3s;
+  }
+  .seid-item-info:hover {
+    background: transparent;
+  }
+  .seid-item-action {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 10;
+    white-space: nowrap;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    .seid-item-icon,
+    a i {
+      z-index: 10;
+      display: inline-block;
+      width: 16px;
+      margin: 0 4px;
+      color: hsla(0, 0%, 100%, 0.85);
+      font-size: 16px;
+      font-style: normal;
+      line-height: 0;
+      text-align: center;
+      text-transform: none;
+      vertical-align: -0.125em;
+      cursor: pointer;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+    }
+    .seid-item-icon,
+    a i:hover {
+      color: #fff;
+    }
+  }
+  .seid-item-title {
+    position: absolute;
+    top: 103px;
+    width: 100px;
+    height: 20px;
+    overflow: hidden;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+  .seid-upload-loading {
+    display: table-cell;
+    width: 104px;
+    height: 104px;
+    margin: 0 8px 8px 0;
+    padding: 8px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #d96c33;
+    border-radius: 4px;
+    .seid-loading-text + .seid-item-icon {
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    i {
+      color: #999;
+      font-size: inherit;
+    }
+    .seid-loading-text {
+      margin-top: 8px;
+      color: #666;
+    }
+  }
+}
+
+.seid-upload-item-thumbnail img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.seid-upload-item:hover .seid-item-info::before,
+.seid-upload-item:hover .seid-item-action {
+  opacity: 1;
+}
+
+.seid-item-info::before {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  content: ' ';
+}

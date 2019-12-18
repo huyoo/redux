@@ -1,0 +1,26 @@
+declare const _default: {
+    unread: string;
+    read: string;
+    deleted: string;
+    none: string;
+    systemMessage: string;
+    groupMessage: string;
+    personalMessage: string;
+    index: string;
+    date: string;
+    category: string;
+    title: string;
+    publisher: string;
+    status: string;
+    processWarning: string;
+    successful: string;
+    all: string;
+    delete: string;
+    setToUnread: string;
+    setToRead: string;
+    messageCategory: string;
+    typeKeyWords: string;
+    messageStatus: string;
+    sendDate: string;
+};
+export default _default;

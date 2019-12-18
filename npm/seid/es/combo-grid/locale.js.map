@@ -1,0 +1,1 @@
+{"version":3,"sources":["combo-grid/locale.jsx"],"names":["total"],"mappings":"AAAA,eAAe;AACXA,EAAAA,KAAK,EAAE;AADI,CAAf","sourcesContent":["export default {\n    total: '共 {total} 条',\n};\n"],"file":"locale.js"}

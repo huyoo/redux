@@ -1,0 +1,1 @@
+{"version":3,"sources":["amount-input/locale.jsx"],"names":["yuan"],"mappings":"AAAA,eAAe;AACXA,EAAAA,IAAI,EAAE;AADK,CAAf","sourcesContent":["export default {\n    yuan: '元',\n};\n"],"file":"locale.js"}

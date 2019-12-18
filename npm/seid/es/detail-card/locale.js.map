@@ -1,0 +1,1 @@
+{"version":3,"sources":["detail-card/locale.jsx"],"names":["title"],"mappings":"AAAA,eAAe;AACXA,EAAAA,KAAK,EAAE;AADI,CAAf","sourcesContent":["export default {\n    title: '标题',\n};\n"],"file":"locale.js"}

@@ -1,0 +1,9 @@
+import 'antd/es/upload/style';
+import 'antd/es/list/style';
+import 'antd/es/button/style';
+import 'antd/es/message/style';
+import 'antd/es/icon/style';
+import 'antd/es/tooltip/style';
+import 'antd/es/avatar/style';
+import 'antd/es/progress/style';
+import 'antd/es/collapse/style';

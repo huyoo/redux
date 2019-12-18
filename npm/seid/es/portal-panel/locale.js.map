@@ -1,0 +1,1 @@
+{"version":3,"sources":["portal-panel/locale.jsx"],"names":["add","save"],"mappings":"AAAA,eAAe;AACXA,EAAAA,GAAG,EAAE,MADM;AAEXC,EAAAA,IAAI,EAAE;AAFK,CAAf","sourcesContent":["export default {\n    add: '添加组件',\n    save: '保存布局',\n};\n"],"file":"locale.js"}

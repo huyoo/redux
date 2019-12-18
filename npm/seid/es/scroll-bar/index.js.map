@@ -1,0 +1,1 @@
+{"version":3,"sources":["scroll-bar/index.jsx"],"names":["ScrollBar"],"mappings":"AAAA,OAAOA,SAAP,MAAsB,yBAAtB;AACA,OAAO,6CAAP;AACA,eAAeA,SAAf","sourcesContent":["import ScrollBar from 'react-perfect-scrollbar';\nimport 'react-perfect-scrollbar/dist/css/styles.css';\nexport default ScrollBar;\n"],"file":"index.js"}

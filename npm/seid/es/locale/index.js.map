@@ -1,0 +1,1 @@
+{"version":3,"sources":["locale/index.jsx"],"names":["default","en_US","zh_CN"],"mappings":"AAAA,SAASA,OAAO,IAAIC,KAApB,QAAiC,SAAjC;AACA,SAASD,OAAO,IAAIE,KAApB,QAAiC,SAAjC","sourcesContent":["export { default as en_US } from './en_US';\nexport { default as zh_CN } from './zh_CN';\n"],"file":"index.js"}

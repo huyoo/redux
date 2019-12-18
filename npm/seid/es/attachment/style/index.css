@@ -1,0 +1,62 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+.seid-upload {
+  position: relative;
+  padding: 16px;
+  color: #fff;
+}
+.seid-upload .tool-bar .tool-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  float: right;
+  width: 120px;
+  height: 60px;
+  color: rgba(0, 0, 0, 0.45);
+}
+.seid-upload .tool-bar .tool-box > .tool-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  background-color: #fafafa;
+  cursor: pointer;
+}
+.seid-upload .tool-bar .tool-box > .tool-btn:first-child {
+  border-radius: 4px 0 0 4px;
+}
+.seid-upload .tool-bar .tool-box > .tool-btn:last-child {
+  border-radius: 0 4px 4px 0;
+}
+.seid-upload .tool-bar .tool-box > .tool-btn:hover {
+  background-color: rgba(24, 144, 255, 0.05);
+}
+.seid-upload .tool-bar .tool-box > .tool-btn.select {
+  color: #1890ff;
+  background-color: rgba(24, 144, 255, 0.1);
+}
+.seid-upload .tool-bar .download-btn {
+  margin-left: 8px;
+}
+.seid-upload .ant-list-item {
+  padding: 12px 8px;
+}
+.download-modal .ant-avatar {
+  background-color: transparent;
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["detail-pane/style/index.jsx"],"names":[],"mappings":"AAAA,OAAO,cAAP;AACA,OAAO,sBAAP","sourcesContent":["import './index.less';\nimport '../../tool-bar/style';\n"],"file":"index.js"}

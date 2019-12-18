@@ -1,0 +1,1 @@
+{"version":3,"sources":["auth-widget/style/index.jsx"],"names":[],"mappings":"AAAA,OAAO,cAAP;AACA,OAAO,mBAAP","sourcesContent":["import './index.less';\nimport '../../utils/style';\n"],"file":"index.js"}

@@ -1,0 +1,62 @@
+.seid-upload-file-list {
+  border-top: 1px solid #d3d3d3;
+
+  .ant-avatar {
+    background-color: transparent;
+  }
+
+  .ant-list-item {
+    &:hover {
+      background-color: rgba(0, 76, 239, 0.05);
+      border-radius: 4px;
+      //.listContent .listContentItem .click-item.animation {
+      //  /* Button animation tryout. */
+      //  display: block;
+      //  animation: moveDown 0.3s ease-in-out 0.2s backwards;
+      //  @keyframes moveDown {
+      //    0% {
+      //      transform: translateX(40px);
+      //      opacity: 0;
+      //    }
+      //    100% {
+      //      transform: translateX(0);
+      //      opacity: 1;
+      //    }
+      //  }
+      //}
+    }
+  }
+
+  .listContent {
+    font-size: 0;
+    .listContentItem {
+      display: inline-block;
+      margin-left: 40px;
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 14px;
+      vertical-align: middle;
+
+      & > span {
+        line-height: 20px;
+      }
+
+      & > p {
+        margin-top: 4px;
+        margin-bottom: 0;
+        line-height: 22px;
+      }
+
+      .processLine {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+      }
+
+      .anticon,
+      .seid-icon {
+        //display: none;
+        margin-left: 16px;
+      }
+    }
+  }
+}

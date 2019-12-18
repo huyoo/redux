@@ -1,0 +1,1 @@
+{"version":3,"sources":["detail-card/style/antdStyle.jsx"],"names":[],"mappings":"AAAA,OAAO,oBAAP","sourcesContent":["import 'antd/es/card/style';\n"],"file":"antdStyle.js"}

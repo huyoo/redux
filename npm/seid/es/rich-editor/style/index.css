@@ -1,0 +1,19 @@
+/* stylelint-disable at-rule-empty-line-before,at-rule-name-space-after,at-rule-no-unknown */
+/* stylelint-disable no-duplicate-selectors */
+/* stylelint-disable */
+/* stylelint-disable declaration-bang-space-before,no-duplicate-selectors,string-no-newline */
+@import '~braft-editor/dist/index.css';
+.bf-modal {
+  z-index: 99;
+}
+.bf-modal .braft-finder .bf-list-wrap {
+  z-index: 3;
+}
+.bf-modal .braft-finder .bf-drag-tip input {
+  font-size: 200px;
+  text-indent: -200px;
+}
+.bf-modal .braft-finder .bf-add-item input {
+  font-size: 200px;
+  text-indent: -200px;
+}

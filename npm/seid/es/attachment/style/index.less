@@ -1,0 +1,61 @@
+@import '../../style/themes/index.less';
+
+.seid-upload {
+  position: relative;
+  padding: 16px;
+  color: #fff;
+
+  .tool-bar {
+    .tool-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      float: right;
+      width: 120px;
+      height: 60px;
+      color: fade(@black, 45%);
+
+      & > .tool-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        text-align: center;
+        background-color: @table-selected-row-bg;
+        cursor: pointer;
+
+        &:first-child {
+          border-radius: 4px 0 0 4px;
+        }
+
+        &:last-child {
+          border-radius: 0 4px 4px 0;
+        }
+
+        &:hover {
+          background-color: fade(@primary-color, 5%);
+        }
+
+        &.select {
+          color: @primary-color;
+          background-color: fade(@primary-color, 10%);
+        }
+      }
+    }
+
+    & .download-btn {
+      margin-left: 8px;
+    }
+  }
+
+  .ant-list-item {
+    padding: 12px 8px;
+  }
+}
+
+.download-modal {
+  .ant-avatar {
+    background-color: transparent;
+  }
+}

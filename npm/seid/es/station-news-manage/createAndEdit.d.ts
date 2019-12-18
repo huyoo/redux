@@ -1,0 +1,50 @@
+import React from 'react';
+import { ModalProps } from 'antd/es/modal';
+import { WrappedFormUtils } from 'antd/es/form/Form';
+import { Method } from 'axios';
+declare type DateType = Date | string | null;
+export interface IStationNewsListDetailProps {
+    getNewsDetailUrl?: string;
+    getNewsDetailUrlRequestMethod: Method;
+    visible: boolean;
+    onCancel: Function;
+    onRefresh: Function;
+    footer?: string | React.ReactNode;
+    detailContent?: string | React.ReactNode;
+    params: object;
+    modalProps?: ModalProps;
+    sign: string;
+    title: string;
+    form: WrappedFormUtils<any>;
+    saveNewsUrl: string;
+    saveNewsRequestMethod: Method;
+    editNewsUrl: string;
+    editNewsRequestMethod: Method;
+    orgUrl: string;
+    orgRequestMethod: Method;
+    fileTypes: string[];
+    uploadDocumentsAPI?: string;
+    downloadDocumentAPI?: string;
+    EDM_URL?: string;
+    receiverUrl?: string;
+    receiverUrlRequestMethod?: Method;
+    userId: string;
+    fileIdAttr: string;
+    fileNameAttr: string;
+    data?: DataElement;
+}
+export interface DataElement {
+    messageTitle?: string;
+    messageContent?: string;
+    messageStatus?: string;
+    messageType?: string;
+    publishDate?: DateType;
+    publisherNick?: string;
+    publisherCode?: string;
+    recipient?: any[];
+    messageAttachment?: string;
+    messageLink?: string;
+    messageId?: string;
+}
+declare const _default: any;
+export default _default;

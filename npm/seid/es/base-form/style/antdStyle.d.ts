@@ -1,0 +1,9 @@
+import 'antd/es/input/style';
+import 'antd/es/form/style';
+import 'antd/es/button/style';
+import 'antd/es/date-picker/style';
+import 'antd/es/row/style';
+import 'antd/es/col/style';
+import 'antd/es/input-number/style';
+import 'antd/es/checkbox/style';
+import 'antd/es/radio/style';

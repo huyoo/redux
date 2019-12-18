@@ -1,0 +1,1 @@
+{"version":3,"sources":["panel/locale.jsx"],"names":["closeTip","closeConfirm"],"mappings":"AAAA,eAAe;AACXA,EAAAA,QAAQ,EAAE,MADC;AAEXC,EAAAA,YAAY,EAAE;AAFH,CAAf","sourcesContent":["export default {\n    closeTip: '关闭提示',\n    closeConfirm: '确定要关闭当前面板吗？',\n};\n"],"file":"locale.js"}
