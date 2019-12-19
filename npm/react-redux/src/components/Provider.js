@@ -4,6 +4,8 @@ import { storeShape, subscriptionShape } from '../utils/PropTypes'
 import warning from '../utils/warning'
 
 let didWarnAboutReceivingStore = false
+
+// 警告store内存地址变了
 function warnAboutReceivingStore() {
   if (didWarnAboutReceivingStore) {
     return
@@ -29,7 +31,7 @@ export function createProvider(storeKey = 'store') {
 
         constructor(props, context) {
           super(props, context)
-          this[storeKey] = props.store;
+          this[storeKey] = props.store;// store存放在this下，而非state
         }
 
         render() {
@@ -37,6 +39,7 @@ export function createProvider(storeKey = 'store') {
         }
     }
 
+    // 非生产环境下，警告store内存地址变了
     if (process.env.NODE_ENV !== 'production') {
       Provider.prototype.componentWillReceiveProps = function (nextProps) {
         if (this[storeKey] !== nextProps.store) {
@@ -49,6 +52,7 @@ export function createProvider(storeKey = 'store') {
         store: storeShape.isRequired,
         children: PropTypes.element.isRequired,
     }
+    // 通过context向下传递store，以此实现store共用
     Provider.childContextTypes = {
         [storeKey]: storeShape.isRequired,
         [subscriptionKey]: subscriptionShape,

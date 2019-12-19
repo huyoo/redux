@@ -10,7 +10,7 @@ import defaultSelectorFactory from './selectorFactory'
   selectorFactory, which has the signature:
 
     (dispatch, options) => (nextState, nextOwnProps) => nextFinalProps
-  
+
   connect passes its args to connectAdvanced as options, which will in turn pass them to
   selectorFactory each time a Connect component instance is instantiated or hot reloaded.
 
@@ -44,10 +44,13 @@ export function createConnect({
   mergePropsFactories = defaultMergePropsFactories,
   selectorFactory = defaultSelectorFactory
 } = {}) {
+
+  // connect绑定函数
   return function connect(
-    mapStateToProps,
-    mapDispatchToProps,
+    mapStateToProps, // store => props
+    mapDispatchToProps, //dispatch处理函数
     mergeProps,
+    // 第四个参数一般用来传入pure或者withRef来控制是否使用pure跟是否返回ref withRef等其他的参数都存在了extraOptions这个里面
     {
       pure = true,
       areStatesEqual = strictEqual,

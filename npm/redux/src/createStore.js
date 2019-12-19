@@ -72,8 +72,9 @@ export default function createStore(reducer, preloadedState, enhancer) {
   let isDispatching = false//状态锁，redux是一个统一管理状态容器，它要保证数据的一致性，所以同一个时间里，只能做一次数据修改，如果两个action同时触发reducer对同一数据的修改，那么将会带来巨大的灾难。所以变量isDispatching就是为了防止这一点而存在的。
 
   function ensureCanMutateNextListeners() {
+    // 判断两个数组是否是同一份数据，即两个数据引用了同一个地址
     if (nextListeners === currentListeners) {
-      nextListeners = currentListeners.slice()
+      nextListeners = currentListeners.slice() // 裁剪返回一个新数组，相当于浅拷贝
     }
   }
 
@@ -118,10 +119,12 @@ export default function createStore(reducer, preloadedState, enhancer) {
    * @returns {Function} A function to remove this change listener.
    */
   function subscribe(listener) {
+    // 校验监听器的类型
     if (typeof listener !== 'function') {
       throw new Error('Expected the listener to be a function.')
     }
 
+    // 状态锁
     if (isDispatching) {
       throw new Error(
         'You may not call store.subscribe() while the reducer is executing. ' +
@@ -131,11 +134,12 @@ export default function createStore(reducer, preloadedState, enhancer) {
       )
     }
 
-    let isSubscribed = true
+    let isSubscribed = true // 是否已订阅
 
-    ensureCanMutateNextListeners()
+    ensureCanMutateNextListeners()// 浅拷贝订阅函数到nextListener
     nextListeners.push(listener)
 
+    // 返回取消订阅函数
     return function unsubscribe() {
       if (!isSubscribed) {
         return
@@ -150,6 +154,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
 
       isSubscribed = false
 
+      // 拷贝并取消订阅
       ensureCanMutateNextListeners()
       const index = nextListeners.indexOf(listener)
       nextListeners.splice(index, 1)
@@ -182,6 +187,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
    * return something else (for example, a Promise you can await).
    */
   function dispatch(action) {
+    // action校验
     if (!isPlainObject(action)) {
       throw new Error(
         'Actions must be plain objects. ' +
@@ -189,6 +195,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
       )
     }
 
+    // action校验
     if (typeof action.type === 'undefined') {
       throw new Error(
         'Actions may not have an undefined "type" property. ' +
@@ -196,6 +203,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
       )
     }
 
+    // 状态锁校验
     if (isDispatching) {
       throw new Error('Reducers may not dispatch actions.')
     }
@@ -207,6 +215,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
       isDispatching = false
     }
 
+    // 调用监听器（通知订阅者）
     const listeners = (currentListeners = nextListeners)
     for (let i = 0; i < listeners.length; i++) {
       const listener = listeners[i]
@@ -236,6 +245,7 @@ export default function createStore(reducer, preloadedState, enhancer) {
   }
 
   /**
+   * 提供观察者模式的操作入口，一般不会使用
    * Interoperability point for observable/reactive libraries.
    * @returns {observable} A minimal observable of state changes.
    * For more information, see the observable proposal:
