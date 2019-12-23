@@ -21,11 +21,14 @@ export default function shallowEqual(objA, objB) {
     return false
   }
 
+
+  // 数字的keys是索引String
   const keysA = Object.keys(objA)
   const keysB = Object.keys(objB)
 
   if (keysA.length !== keysB.length) return false
 
+  // 循环校验每个属性值是否相等
   for (let i = 0; i < keysA.length; i++) {
     if (!hasOwn.call(objB, keysA[i]) ||
         !is(objA[keysA[i]], objB[keysA[i]])) {
