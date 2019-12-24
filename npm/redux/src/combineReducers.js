@@ -14,6 +14,7 @@ function getUndefinedStateErrorMessage(key, action) {
   )
 }
 
+// 检查state和reducer中的属性名是否一致
 function getUnexpectedStateShapeWarningMessage(
   inputState,
   reducers,
@@ -42,6 +43,7 @@ function getUnexpectedStateShapeWarningMessage(
     )
   }
 
+  // 取出state的属性，循环查找对应在reducers中不存在的属性名
   const unexpectedKeys = Object.keys(inputState).filter(
     key => !reducers.hasOwnProperty(key) && !unexpectedKeyCache[key]
   )
@@ -52,6 +54,7 @@ function getUnexpectedStateShapeWarningMessage(
 
   if (action && action.type === ActionTypes.REPLACE) return
 
+  // 有不对应的属性时，返回信息
   if (unexpectedKeys.length > 0) {
     return (
       `Unexpected ${unexpectedKeys.length > 1 ? 'keys' : 'key'} ` +
@@ -62,7 +65,9 @@ function getUnexpectedStateShapeWarningMessage(
   }
 }
 
+// 检查reducer返回值
 function assertReducerShape(reducers) {
+  // 循环初始化reducer，检查结果是否为空，是就抛异常
   Object.keys(reducers).forEach(key => {
     const reducer = reducers[key]
     const initialState = reducer(undefined, { type: ActionTypes.INIT })
@@ -77,6 +82,7 @@ function assertReducerShape(reducers) {
       )
     }
 
+    // 使用随机类型监测是否有返回结果，如果为undefined，说明<redux/*>命名空间被占用了
     if (
       typeof reducer(undefined, {
         type: ActionTypes.PROBE_UNKNOWN_ACTION()
@@ -113,17 +119,19 @@ function assertReducerShape(reducers) {
  * passed object, and builds a state object with the same shape.
  */
 export default function combineReducers(reducers) {
-  const reducerKeys = Object.keys(reducers)
+  const reducerKeys = Object.keys(reducers)// 获取所有的属性名
   const finalReducers = {}
   for (let i = 0; i < reducerKeys.length; i++) {
     const key = reducerKeys[i]
 
+    // 非生产环境提示reducer未定义
     if (process.env.NODE_ENV !== 'production') {
       if (typeof reducers[key] === 'undefined') {
         warning(`No reducer provided for key "${key}"`)
       }
     }
 
+    // 只有函数才会被拷贝到finalReducers中
     if (typeof reducers[key] === 'function') {
       finalReducers[key] = reducers[key]
     }
@@ -135,6 +143,7 @@ export default function combineReducers(reducers) {
     unexpectedKeyCache = {}
   }
 
+  // 检查reducer返回值的类型，不能为undefined，不能占用redux命名空间
   let shapeAssertionError
   try {
     assertReducerShape(finalReducers)
@@ -147,6 +156,7 @@ export default function combineReducers(reducers) {
       throw shapeAssertionError
     }
 
+    // 非生产环境下，检查是否有不存在的reducer，有的话给出提示
     if (process.env.NODE_ENV !== 'production') {
       const warningMessage = getUnexpectedStateShapeWarningMessage(
         state,
@@ -161,6 +171,8 @@ export default function combineReducers(reducers) {
 
     let hasChanged = false
     const nextState = {}
+
+    // 循环reducerKeys，将对应的reducer执行一遍，返回的值作为新的state( nextStateForKey )，赋给nextState[key]，最后判断是否有state变化了
     for (let i = 0; i < finalReducerKeys.length; i++) {
       const key = finalReducerKeys[i]
       const reducer = finalReducers[key]
@@ -173,6 +185,6 @@ export default function combineReducers(reducers) {
       nextState[key] = nextStateForKey
       hasChanged = hasChanged || nextStateForKey !== previousStateForKey
     }
-    return hasChanged ? nextState : state
+    return hasChanged ? nextState : state//根据是否有变化标记，决定是否要返回新的state
   }
 }

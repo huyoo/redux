@@ -16,7 +16,7 @@ const randomString = () =>
 const ActionTypes = {
   INIT: `@@redux/INIT${randomString()}`,
   REPLACE: `@@redux/REPLACE${randomString()}`,
-  PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${randomString()}`
+  PROBE_UNKNOWN_ACTION: () => `@@redux/PROBE_UNKNOWN_ACTION${randomString()}`// 随机未知的操作类型
 }
 
 export default ActionTypes
